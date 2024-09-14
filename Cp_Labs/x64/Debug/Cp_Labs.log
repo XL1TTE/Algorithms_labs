@@ -1,0 +1,3 @@
+﻿  CountingSort.cpp
+C:\Users\zzzxl\source\repos\Cp_Labs\Cp_Labs\CountingSort.cpp(7,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Cp_Labs.vcxproj -> C:\Users\zzzxl\source\repos\Cp_Labs\x64\Debug\Cp_Labs.exe

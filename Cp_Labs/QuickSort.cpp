@@ -3,57 +3,40 @@
 
 using namespace std;
 
-void QuickSort::Sort(vector<int>& data) {
 
-	int DataLenght = data.size();
-	int DataSeparator;
 
-	int Key;
 
-	if (DataLenght > 1) {
-		DataSeparator = DataLenght / 2;
-		// Разделяем коллекцию на две части
-		vector<int> dataLeft; // Левая
 
-		vector<int> dataRight; // Правая
+int Partition(vector<int>& data, int left, int right) {
 
-		Key = data[DataSeparator];
+	int key = data[right];
 
-		for (int i = 0; i < DataLenght; i++) {
-			if (i != DataSeparator) {
-				if (data[i] < Key) {
-					dataLeft.push_back(data[i]);
-				}
-				else {
-					dataRight.push_back(data[i]);
-				}
-			}
+	int InsertIndex = left - 1;
+
+	for (int i = left; i <= right - 1; i++) {
+		if (data[i] <= key) {
+			InsertIndex++;
+			swap(data[i], data[InsertIndex]);
 		}
-
-		Sort(dataLeft);
-		Sort(dataRight);
-
-		BuildData(data, dataLeft, dataRight, Key);
-
 	}
-
+	swap(data[InsertIndex + 1], data[right]);
+	return InsertIndex + 1;
 }
 
-void QuickSort::BuildData(vector<int>& data, vector<int>& left, vector<int>& right, int& key) {
-	int lenD = data.size();
-	int lenL = left.size();
-	int lenR = right.size();
+void QuickSorting(vector<int>& data, int left, int right) {
+	if (left < right) {
 
-	int pointer = 0;
+		int KeyPosition = Partition(data, left, right);
 
-	for (int i = 0; i < lenL; ++i) {
-		data[i] = left[i];
+		QuickSorting(data, left, KeyPosition - 1); // Left part
+		QuickSorting(data, KeyPosition + 1, right); //Right part
+
 	}
-	data[lenL] = key;
-	pointer = lenL + 1;
+}
 
-	for (int i = 0; i < lenR; ++i) {
-		data[pointer + i] = right[i];
+void QuickSort::Sort(vector<int>& data) {
+	if (data.size() <= 1) {
+		return;
 	}
-
+	QuickSorting(data, 0, data.size() - 1);
 }

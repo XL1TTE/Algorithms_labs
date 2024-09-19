@@ -39,6 +39,9 @@
     <ClCompile Include="CountingSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SortsTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -62,5 +65,13 @@
     <ClInclude Include="CountingSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortsTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="output.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -2,22 +2,24 @@
 #include "InsertionSort.h"
 #include "SelectionSort.h"
 #include "MergeSort.h"
-#include "CountingSort.h"
 #include "QuickSort.h"
+#include "CountingSort.h"
 #include "ConsoleHelper.h"
+#include "SortsTester.h"
 #include <iostream>
 #include "vector"
+#include <random>
+#include "fstream"
 
 int main()
 {
+
+    srand(time(0));
+
+    std::ofstream fcout("output.txt");
+
 #pragma region BubbleSort
-    std::vector<int> myDataVector = ConsoleHelper::InitializeVectorConsole();
-
-    CountingSort::Sort(myDataVector);
-
-    for (int i = 0; i < myDataVector.size(); ++i) {
-        std::cout << myDataVector[i] << " ";
-    }
+    SortsTester::Test(1000000);
 #pragma endregion
 
 

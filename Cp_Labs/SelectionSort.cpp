@@ -9,9 +9,9 @@ void SelectionSort::Sort(vector<int>& data) {
 	int MinIndex;
 
 	for (int iter = 0; iter < DataLenght; iter++) {
-		PostionToSet = iter; // Позиция в которую будем устанавливать минимальное значение
+		PostionToSet = iter;
 
-		MinIndex = iter; // Устанавливаем минимальную позицию по умолчанию
+		MinIndex = iter; 
 
 		for (int i = iter; i < DataLenght; i++) {
 			if (data[i] < data[MinIndex]) {

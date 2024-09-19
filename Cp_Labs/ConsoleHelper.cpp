@@ -16,12 +16,11 @@ std::vector<int> ConsoleHelper::InitializeVectorConsole() {
 
 	cout << "Enter lenght of array." << endl;
 	cin >> DataLenght;
-	cout << "Array initialization, please enter the numbers." << endl;
 
 	for (int i = 0; i < DataLenght; ++i)
 	{
 		int x;
-		cin >> x;
+		x = rand()%1000;
 		data.push_back(x); // заполняем вектор
 	}
 	for (int i = 0; i < data.size(); ++i)
@@ -30,6 +29,5 @@ std::vector<int> ConsoleHelper::InitializeVectorConsole() {
 	}
 	callback = oss.str();
 
-	cout << "Inserted data - " << callback << endl;
 	return data;
 }

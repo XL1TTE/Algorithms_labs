@@ -8,15 +8,13 @@ using namespace std;
 	 int DataLenght = data.size();
 	 int key;
 	 int PreffixIndex;
-	 for (int i = 1; i < DataLenght-1; i++) {
-		 key = i;
+	 for (int i = 1; i < DataLenght; i++) {
 		 PreffixIndex = i - 1;
-		 while (PreffixIndex >= 0) {
-			 if (data[PreffixIndex] > data[key]) {
-				 swap(data[key], data[PreffixIndex]);
-				 key = PreffixIndex;
-			 }
+		 key = data[i];
+		 while (PreffixIndex >= 0 && data[PreffixIndex] > key){
+			 data[PreffixIndex + 1] = data[PreffixIndex];
 			 PreffixIndex--;
 		 }
+		 data[PreffixIndex + 1] = key;
 	 }
 }

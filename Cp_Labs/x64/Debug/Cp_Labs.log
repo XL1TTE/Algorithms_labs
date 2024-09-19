@@ -1,3 +1,7 @@
-﻿  CountingSort.cpp
-C:\Users\zzzxl\source\repos\Cp_Labs\Cp_Labs\CountingSort.cpp(7,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  Cp_Labs.cpp
+C:\Users\zzzxl\source\repos\Cp_Labs\Cp_Labs\SortsTester.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\zzzxl\source\repos\Cp_Labs\Cp_Labs\Cp_Labs.cpp(17,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SortsTester.cpp
+C:\Users\zzzxl\source\repos\Cp_Labs\Cp_Labs\SortsTester.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
   Cp_Labs.vcxproj -> C:\Users\zzzxl\source\repos\Cp_Labs\x64\Debug\Cp_Labs.exe

@@ -9,5 +9,7 @@ public:
 
 private: 
 	static void BuildData(std::vector<int>& data, std::vector<int>& left, std::vector<int>& right, int& separator);
+
+
 };
 

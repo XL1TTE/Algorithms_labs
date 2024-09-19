@@ -9,7 +9,7 @@ void MergeSort::Sort(vector<int> &data) {
 	if (DataLenght > 1) {
 		DataSeparator = DataLenght / 2;
 		// Разделяем коллекцию на две части
-		std::vector<int> dataLeft(data.begin(), data.end() - DataSeparator); // Левая
+		std::vector<int> dataLeft(data.begin(), data.begin() + DataSeparator); // Левая
 
 		std::vector<int> dataRight(data.begin() + DataSeparator, data.end()); // Правая
 

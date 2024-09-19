@@ -5,7 +5,7 @@ using namespace std;
 
 void CountingSort::Sort(vector<int>& data) {
     int DataLenght = data.size();
-    int Counter[100] = { 0 };
+    int Counter[1000] = { 0 };
 
 
     for (int i = 0; i < DataLenght; i++) {
@@ -13,7 +13,7 @@ void CountingSort::Sort(vector<int>& data) {
     }
 
     int pointer = 0;
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 1000; i++)
         while (Counter[i] != 0)
         {
             data[pointer] = i;
